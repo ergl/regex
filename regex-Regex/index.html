@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-ponylang-0.2.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-ponylang-0.2.8">
     
     
       
@@ -544,14 +544,14 @@
                 
                 
                 <h1 id="regex">Regex<a class="headerlink" href="#regex" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/regex/regex/#L51">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L68">[Source]</a></span></p>
 <p>A perl compatible regular expression. This uses the PCRE2 library, and
 attempts to enable JIT matching whenever possible.</p>
 <pre><code class="language-pony">class ref Regex
 </code></pre>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L59">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L76">[Source]</a></span></p>
 <p>Compile a regular expression. Raises an error for an invalid expression.</p>
 <pre><code class="language-pony">new ref create(
   from: (String box | Array[U8 val] box),
@@ -570,7 +570,7 @@ attempts to enable JIT matching whenever possible.</p>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="matches">matches<a class="headerlink" href="#matches" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L77">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L94">[Source]</a></span></p>
 <p>Creates a match iterator from the regular expression that will iterate
 over the supplied subject returning matches.</p>
 <pre><code class="language-pony">fun box matches(
@@ -587,7 +587,7 @@ over the supplied subject returning matches.</p>
 </ul>
 <hr />
 <h3 id="eq">eq<a class="headerlink" href="#eq" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L84">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L101">[Source]</a></span></p>
 <p>Return true on a successful match, false otherwise.</p>
 <pre><code class="language-pony">fun box eq(
   subject: (String box | Array[U8 val] box))
@@ -603,7 +603,7 @@ over the supplied subject returning matches.</p>
 </ul>
 <hr />
 <h3 id="ne">ne<a class="headerlink" href="#ne" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L96">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L113">[Source]</a></span></p>
 <p>Return false on a successful match, true otherwise.</p>
 <pre><code class="language-pony">fun box ne(
   subject: (String box | Array[U8 val] box))
@@ -619,7 +619,7 @@ over the supplied subject returning matches.</p>
 </ul>
 <hr />
 <h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L102">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L119">[Source]</a></span></p>
 <p>Match the supplied string, starting at the given offset. Returns a Match
 object that can give precise match details. Raises an error if there is no
 match.</p>
@@ -639,7 +639,7 @@ match.</p>
 </ul>
 <hr />
 <h3 id="replaceoptional-a-sequ8-val-iso-string-iso-arrayu8-val-iso">replace[optional A: (<a href="https://stdlib.ponylang.io/builtin-Seq/">Seq</a>[<a href="https://stdlib.ponylang.io/builtin-U8/">U8</a> val] iso &amp; (<a href="https://stdlib.ponylang.io/builtin-String/">String</a> iso | <a href="https://stdlib.ponylang.io/builtin-Array/">Array</a>[<a href="https://stdlib.ponylang.io/builtin-U8/">U8</a> val] iso))]<a class="headerlink" href="#replaceoptional-a-sequ8-val-iso-string-iso-arrayu8-val-iso" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L111">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L128">[Source]</a></span></p>
 <p>Perform a match on the subject, starting at the given offset, and create
 a new string using the value as a replacement for what was matched. Raise
 an error if there is no match.</p>
@@ -663,7 +663,7 @@ an error if there is no match.</p>
 </ul>
 <hr />
 <h3 id="split">split<a class="headerlink" href="#split" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L159">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L176">[Source]</a></span></p>
 <p>Split subject by non-empty occurrences of this pattern, returning a list
 of the substrings.</p>
 <pre><code class="language-pony">fun box split(
@@ -682,7 +682,7 @@ of the substrings.</p>
 </ul>
 <hr />
 <h3 id="index">index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L185">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L202">[Source]</a></span></p>
 <p>Returns the index of a named capture. Raises an error if the named capture
 does not exist.</p>
 <pre><code class="language-pony">fun box index(
@@ -699,7 +699,7 @@ does not exist.</p>
 </ul>
 <hr />
 <h3 id="dispose">dispose<a class="headerlink" href="#dispose" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/regex/#L199">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/regex/#L216">[Source]</a></span></p>
 <p>Free the underlying PCRE2 data.</p>
 <pre><code class="language-pony">fun ref dispose()
 : None val

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-ponylang-0.2.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-ponylang-0.2.8">
     
     
       
@@ -478,13 +478,13 @@
                 
                 
                 <h1 id="match">Match<a class="headerlink" href="#match" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/regex/match/#L3">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L14">[Source]</a></span></p>
 <p>Contains match data for a combination of a regex and a subject.</p>
 <pre><code class="language-pony">class ref Match
 </code></pre>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="size">size<a class="headerlink" href="#size" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/match/#L19">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L30">[Source]</a></span></p>
 <p>Returns the capture size of the match.</p>
 <pre><code class="language-pony">fun box size()
 : U32 val
@@ -495,7 +495,7 @@
 </ul>
 <hr />
 <h3 id="start_pos">start_pos<a class="headerlink" href="#start_pos" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/match/#L25">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L36">[Source]</a></span></p>
 <p>Returns the character position of the first character in the match.</p>
 <pre><code class="language-pony">fun box start_pos()
 : USize val
@@ -506,7 +506,7 @@
 </ul>
 <hr />
 <h3 id="end_pos">end_pos<a class="headerlink" href="#end_pos" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/match/#L31">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L42">[Source]</a></span></p>
 <p>Returns the character position of the last character in the match.</p>
 <pre><code class="language-pony">fun box end_pos()
 : USize val
@@ -517,7 +517,7 @@
 </ul>
 <hr />
 <h3 id="applyoptional-a-string-iso-arrayu8-val-iso-sequ8-val-iso">apply[optional A: ((<a href="https://stdlib.ponylang.io/builtin-String/">String</a> iso | <a href="https://stdlib.ponylang.io/builtin-Array/">Array</a>[<a href="https://stdlib.ponylang.io/builtin-U8/">U8</a> val] iso) &amp; <a href="https://stdlib.ponylang.io/builtin-Seq/">Seq</a>[<a href="https://stdlib.ponylang.io/builtin-U8/">U8</a> val] iso)]<a class="headerlink" href="#applyoptional-a-string-iso-arrayu8-val-iso-sequ8-val-iso" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/match/#L39">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L50">[Source]</a></span></p>
 <p>Returns a capture by number. Raises an error if the index is out of bounds.</p>
 <pre><code class="language-pony">fun box apply[optional A: ((String iso | Array[U8 val] iso) &amp; Seq[U8 val] iso)](
   i: U32 val)
@@ -533,7 +533,7 @@
 </ul>
 <hr />
 <h3 id="findoptional-a-string-iso-arrayu8-val-iso-sequ8-val-iso">find[optional A: ((<a href="https://stdlib.ponylang.io/builtin-String/">String</a> iso | <a href="https://stdlib.ponylang.io/builtin-Array/">Array</a>[<a href="https://stdlib.ponylang.io/builtin-U8/">U8</a> val] iso) &amp; <a href="https://stdlib.ponylang.io/builtin-Seq/">Seq</a>[<a href="https://stdlib.ponylang.io/builtin-U8/">U8</a> val] iso)]<a class="headerlink" href="#findoptional-a-string-iso-arrayu8-val-iso-sequ8-val-iso" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/match/#L60">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L71">[Source]</a></span></p>
 <p>Returns a capture by name. Raises an error if the named capture does not
 exist.</p>
 <pre><code class="language-pony">fun box find[optional A: ((String iso | Array[U8 val] iso) &amp; Seq[U8 val] iso)](
@@ -550,7 +550,7 @@ exist.</p>
 </ul>
 <hr />
 <h3 id="groups">groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/match/#L85">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L96">[Source]</a></span></p>
 <p>Returns all of the captured subgroups. Groups that failed to capture
 anything will contain the empty string.</p>
 <pre><code class="language-pony">fun box groups()
@@ -562,7 +562,7 @@ anything will contain the empty string.</p>
 </ul>
 <hr />
 <h3 id="dispose">dispose<a class="headerlink" href="#dispose" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/regex/match/#L103">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/regex/match/#L114">[Source]</a></span></p>
 <p>Free the underlying PCRE2 data.</p>
 <pre><code class="language-pony">fun ref dispose()
 : None val
