@@ -38,6 +38,7 @@ actor Main
 
 """
 
+use "path:/opt/homebrew/opt/pcre2/lib/" if osx and arm
 use "lib:pcre2-8"
 
 use @pcre2_compile_8[Pointer[_Pattern]](pattern: Pointer[U8] tag, size: USize,
